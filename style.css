@@ -1,0 +1,383 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    padding-top: 80px; /* To account for fixed header */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #0056b3;
+    color: white;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #003d7a;
+    transform: translateY(-2px);
+}
+
+section {
+    padding: 80px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Header Styles */
+header {
+    background-color: transparent;
+    /*box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    transition: background-color 0s;
+}
+
+header.scrolled {
+    background-color: white;
+}
+
+header.scrolled nav a {
+    color: #333;
+}
+
+header.scrolled .logo-light {
+    opacity: 0;
+}
+
+header.scrolled .logo-dark {
+    opacity: 1;
+}
+
+/* header.sticky-header {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+*/
+header.solid {
+    background-color: white;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.logo {
+    transition: opacity 0s;
+}
+
+.logo-light {
+    opacity: 1;
+}
+
+.logo-dark {
+    opacity: 0;
+    position: absolute;
+}
+
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(0, 86, 179);
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://annetagroup.com/wp-content/uploads/2022/07/hero-bg.jpg'); */ 
+    background-image: url(./images/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 200px 0 150px;
+    margin-top: -80px; /* Counteract the body padding */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 4px rgba(0, 86, 179, 50.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* Services Section */
+.services {
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgb(0, 86, 179);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Clients Section */
+.clients {
+    background: #f9f9f9;
+    text-align: center;
+}
+
+
+/* Contact Section */
+.contact {
+    background: #0056b3;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    color: white;
+}
+
+.contact-form img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+
+
+/* Footer */
+footer {
+    background: #222;
+    color: #aaa;
+    padding: 60px 0 20px;
+}
+
+.footer-contain {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+    */
+
+.footer-column h3 {
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+.footer-column ul li a:hover {
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #333;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .about {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        top: 70px; /* Matches your logo height */
+        background: rgba(255,255,255,0.98); /* Semi-transparent white */
+    }
+
+     nav ul li a {
+        color: #333 !important; /* Force dark text */
+        padding: 12px 20px;
+        display: block;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 10px 20px;
+    }
+
+    nav ul li:hover {
+        background: #f5f5f5;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .contact-form img {
+        max-width: 90%;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 150px 0 100px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        padding: 30px 20px;
+    }
+}
+
