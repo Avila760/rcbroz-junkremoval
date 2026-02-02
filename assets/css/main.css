@@ -247,10 +247,14 @@ a.active {
 	width: 300px;
 	height: auto;
 	margin: 5px;
-	border: 10px solid white;
+	border: 10px solid #353849;
 	border-radius: 15px;
   }
 
+ /* Light mode override */
+[data-theme="light"] .gallery-images img {
+    border-color: white;
+}
 iframe {
 	margin-top: 50px;
 }
